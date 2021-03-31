@@ -19,18 +19,16 @@ the current terminal. It is primarily meant as a replacement for urlview.
 
 %prep
 %autosetup -p0
-#cp -p %{SOURCE1} .
 
 %build
 %py_build
-
 
 %install
 %py_install
 
 %files
 %license COPYING
-%doc muttrc README.rst
+%doc README.rst
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %{python_sitelib}/*
