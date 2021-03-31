@@ -28,7 +28,7 @@ the current terminal. It is primarily meant as a replacement for urlview.
 
 %files
 %license COPYING
-%doc README.rst
+%doc README.rst COPYING
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %{python_sitelib}/*
