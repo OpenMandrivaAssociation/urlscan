@@ -1,6 +1,6 @@
 Name:           urlscan
-Version:        0.9.6
-Release:        2
+Version:        1.0.7
+Release:        1
 Summary:        Extract and browse the URLs contained in an email (urlview replacement)
 
 License:        GPLv2+
