@@ -10,15 +10,18 @@ Source0:        https://github.com/firecat53/%{name}/archive/%{version}/%{name}-
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(setuptools)
-Requires:       python3dist(urwid)
+BuildRequires:  python%{py_ver}dist(setuptools)
+BuildRequires:  python%{py_ver}dist(hatchling)
+BuildRequires:  python%{py_ver}dist(hatch-vcs)
+Requires:       python%{py_ver}dist(urwid)
+
 
 %description
 %{name} searches for URLs in email messages, then displays a list of them in
 the current terminal. It is primarily meant as a replacement for urlview.
 
 %prep
-%autosetup -p0
+%autosetup
 
 %build
 %py_build
@@ -27,8 +30,8 @@ the current terminal. It is primarily meant as a replacement for urlview.
 %py_install
 
 %files
-%license COPYING
-%doc README.rst COPYING
+/usr/share/doc/%{name}/LICENSE
+/usr/share/doc/%{name}/README.md
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %{python_sitelib}/*
