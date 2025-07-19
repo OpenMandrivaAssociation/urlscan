@@ -13,7 +13,7 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  python%{py_ver}dist(setuptools)
 BuildRequires:  python%{py_ver}dist(hatchling)
 BuildRequires:  python%{py_ver}dist(hatch-vcs)
-Requires:       python%{py_ver}dist(urwid)
+Requires:       python-urwid
 
 
 %description
